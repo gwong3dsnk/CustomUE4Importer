@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>2210</width>
+    <height>700</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="HLayout">
+   <widget class="QLabel" name="LBL_Status">
+    <property name="geometry">
+     <rect>
+      <x>2005</x>
+      <y>50</y>
+      <width>200</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Status</string>
+    </property>
+   </widget>
+   <widget class="QListWidget" name="LIST_SourcePath">
+    <property name="geometry">
+     <rect>
+      <x>680</x>
+      <y>74</y>
+      <width>650</width>
+      <height>499</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>500</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>16777215</width>
+      <height>16777215</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(220, 220, 220);
+alternate-background-color: rgb(190, 190, 190);</string>
+    </property>
+    <property name="alternatingRowColors">
+     <bool>true</bool>
+    </property>
+    <property name="selectionMode">
+     <enum>QAbstractItemView::NoSelection</enum>
+    </property>
+   </widget>
+   <widget class="QTreeView" name="TV_FileBrowse">
+    <property name="geometry">
+     <rect>
+      <x>17</x>
+      <y>74</y>
+      <width>650</width>
+      <height>499</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>500</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="contextMenuPolicy">
+     <enum>Qt::CustomContextMenu</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="selectionMode">
+     <enum>QAbstractItemView::ExtendedSelection</enum>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="BTN_ClearLists">
+    <property name="geometry">
+     <rect>
+      <x>1342</x>
+      <y>590</y>
+      <width>650</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Click to clear out all items from all lists and start importing from a fresh slate.</string>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(175, 175, 175);</string>
+    </property>
+    <property name="text">
+     <string>Clear Lists</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="LBL_UE4DestPath">
+    <property name="geometry">
+     <rect>
+      <x>1342</x>
+      <y>50</y>
+      <width>500</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>500</width>
+      <height>20</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>UE4 Destination Path</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="BTN_ImportAssets">
+    <property name="geometry">
+     <rect>
+      <x>680</x>
+      <y>590</y>
+      <width>650</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(175, 175, 175);</string>
+    </property>
+    <property name="text">
+     <string>Import</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="BTN_AddFile">
+    <property name="geometry">
+     <rect>
+      <x>17</x>
+      <y>590</y>
+      <width>650</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Select assets from the above file browser and click to add them for import.</string>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(175, 175, 175);</string>
+    </property>
+    <property name="text">
+     <string>Add File</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="LBL_AssetSourcePath">
+    <property name="geometry">
+     <rect>
+      <x>680</x>
+      <y>50</y>
+      <width>500</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>500</width>
+      <height>20</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Asset Source Path</string>
+    </property>
+   </widget>
+   <widget class="QListWidget" name="LIST_UE4Path">
+    <property name="geometry">
+     <rect>
+      <x>1342</x>
+      <y>74</y>
+      <width>650</width>
+      <height>499</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>500</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>16777215</width>
+      <height>16777215</height>
+     </size>
+    </property>
+    <property name="contextMenuPolicy">
+     <enum>Qt::DefaultContextMenu</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(220, 220, 220);
+alternate-background-color: rgb(190, 190, 190);</string>
+    </property>
+    <property name="alternatingRowColors">
+     <bool>true</bool>
+    </property>
+    <property name="selectionMode">
+     <enum>QAbstractItemView::NoSelection</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="LBL_FileBrowse">
+    <property name="geometry">
+     <rect>
+      <x>17</x>
+      <y>50</y>
+      <width>659</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Browse to Files to Add</string>
+    </property>
+   </widget>
+   <widget class="QListWidget" name="LIST_Status">
+    <property name="geometry">
+     <rect>
+      <x>2005</x>
+      <y>74</y>
+      <width>200</width>
+      <height>499</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>0</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>200</width>
+      <height>16777215</height>
+     </size>
+    </property>
+    <property name="contextMenuPolicy">
+     <enum>Qt::CustomContextMenu</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(220, 220, 220);
+alternate-background-color: rgb(190, 190, 190);</string>
+    </property>
+    <property name="alternatingRowColors">
+     <bool>true</bool>
+    </property>
+    <property name="selectionMode">
+     <enum>QAbstractItemView::NoSelection</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="LBL_TitleAssetType">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>10</y>
+      <width>391</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>TempText</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>2210</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_File">
+    <property name="title">
+     <string>&amp;File</string>
+    </property>
+    <widget class="QMenu" name="menuOpen_Mesh_Importer">
+     <property name="title">
+      <string>Open &amp;Mesh Importer</string>
+     </property>
+     <addaction name="actionOpenCharacterFBXImporter"/>
+     <addaction name="actionOpenWeaponFBXImporter"/>
+     <addaction name="actionOpenGadgetFBXImporter"/>
+     <addaction name="actionOpenVehicleFBXImporter"/>
+    </widget>
+    <widget class="QMenu" name="menuOpen_Skin_Importer">
+     <property name="title">
+      <string>Open Skin Importer</string>
+     </property>
+     <addaction name="actionOpenCharacterSkinImporter"/>
+     <addaction name="actionOpenWeaponSkinImporter"/>
+     <addaction name="actionOpenGadgetSkinImporter"/>
+     <addaction name="actionOpenVehicleSkinImporter"/>
+    </widget>
+    <addaction name="menuOpen_Mesh_Importer"/>
+    <addaction name="menuOpen_Skin_Importer"/>
+    <addaction name="actionOpenUIImporter"/>
+    <addaction name="separator"/>
+    <addaction name="actionClearLists"/>
+    <addaction name="actionE_xit"/>
+   </widget>
+   <widget class="QMenu" name="menu_Edit">
+    <property name="title">
+     <string>&amp;Edit</string>
+    </property>
+    <addaction name="actionStripCHABones"/>
+    <addaction name="separator"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionAboutCustomImporter"/>
+    <addaction name="actionContactHelp"/>
+   </widget>
+   <addaction name="menu_File"/>
+   <addaction name="menu_Edit"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionE_xit">
+   <property name="text">
+    <string>E&amp;xit</string>
+   </property>
+  </action>
+  <action name="actionStripCHABones">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Strip LOD Finger Bones for Character Bodies</string>
+   </property>
+  </action>
+  <action name="actionOpenCharacterFBXImporter">
+   <property name="text">
+    <string>&amp;Characters</string>
+   </property>
+   <property name="toolTip">
+    <string>Open Window to Import Character FBX Mesh</string>
+   </property>
+  </action>
+  <action name="actionOpenWeaponFBXImporter">
+   <property name="text">
+    <string>&amp;Weapons</string>
+   </property>
+   <property name="toolTip">
+    <string>Open Window to Import Weapon FBX Mesh</string>
+   </property>
+  </action>
+  <action name="actionOpenGadgetFBXImporter">
+   <property name="text">
+    <string>&amp;Gadgets</string>
+   </property>
+   <property name="toolTip">
+    <string>Open Window to Import Gadget FBX Mesh</string>
+   </property>
+  </action>
+  <action name="actionOpenVehicleFBXImporter">
+   <property name="text">
+    <string>&amp;Vehicles</string>
+   </property>
+   <property name="toolTip">
+    <string>Open Window to Import Vehicle FBX Mesh</string>
+   </property>
+  </action>
+  <action name="actionOpenCharacterSkinImporter">
+   <property name="text">
+    <string>&amp;Characters</string>
+   </property>
+   <property name="toolTip">
+    <string>Open Window to Import Character Skins/Textures</string>
+   </property>
+  </action>
+  <action name="actionOpenWeaponSkinImporter">
+   <property name="text">
+    <string>&amp;Weapons</string>
+   </property>
+   <property name="toolTip">
+    <string>Open Window to Import Weapon Skins/Textures</string>
+   </property>
+  </action>
+  <action name="actionOpenGadgetSkinImporter">
+   <property name="text">
+    <string>&amp;Gadgets</string>
+   </property>
+   <property name="toolTip">
+    <string>Open Window to Import Gadget Skins/Textures</string>
+   </property>
+  </action>
+  <action name="actionOpenVehicleSkinImporter">
+   <property name="text">
+    <string>&amp;Vehicles</string>
+   </property>
+   <property name="toolTip">
+    <string>Open Window to Import Vehicle Skins/Textures</string>
+   </property>
+  </action>
+  <action name="actionOpenUIImporter">
+   <property name="text">
+    <string>Open UI Importer</string>
+   </property>
+   <property name="toolTip">
+    <string>Open Window to Import UI Textures</string>
+   </property>
+  </action>
+  <action name="actionAboutCustomImporter">
+   <property name="text">
+    <string>About CustomImporter</string>
+   </property>
+  </action>
+  <action name="actionContactHelp">
+   <property name="text">
+    <string>Contact for Help</string>
+   </property>
+  </action>
+  <action name="actionResetDefaults">
+   <property name="text">
+    <string>Reset Defaults</string>
+   </property>
+  </action>
+  <action name="actionClearLists">
+   <property name="text">
+    <string>Clear Lists</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
